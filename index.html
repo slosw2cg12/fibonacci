@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	
+    <title>Ciąg Fibonacciego</title>
+	
+	<meta name="description" content="Opis w Google" />
+	<meta name="keywords" content="słowa, kluczowe, wypisane, po, porzecinku" />
+
+	
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	
+<script>
+	function fib() {
+let loop = [0, 1];
+let number=document.getElementById('txtloop').value;
+for (let i = 2; i < number; i++)
+ loop[i] = loop[i-1]+ loop[i-2];
+  document.getElementById('output').innerHTML=loop[number-1];
+}
+
+</script>
+	
+</head>
+
+<body>
+<center>
+<h1 class = "nn">Ciąg Fibonacciego</h1>
+
+<br/><br/><br/><br/>
+
+<h2 class = "topbar">Schemat blokowy</h2>
+<img src = "zdj1.png">
+</center>
+
+<h2 class = "nn2">Kod C++</h2>
+
+<code>#include&lt;iostream&gt;<br/>
+    using namespace std;<br/>
+    <br/>
+    void fibonacci(int n)<br/>
+    {   <br/> 
+         long long a = 0, b = 1;<br/>
+         <br/>
+         for(int i=0;i&lt;n;i++)<br/>
+         {<br/>
+                cout&lt;&lt;b&lt;&lt;&quot; &quot;;<br/>
+                b += a;<br/>
+                a = b-a;<br/>
+         }    <br/> 
+    }<br/>
+    <br/>
+    int main()<br/>
+    {<br/>
+        int n;<br/>
+        <br/>
+        cout&lt;&lt;&quot;Podaj ile chcesz wypisać wyrazów ciągu fibonacciego: &quot;;<br/>
+        cin&gt;&gt;n;<br/>
+        <br/>
+        fibonacci(n);<br/>
+        <br/>
+        return 0;<br/>
+    }</code>
+    <br/><br/><br/>
+
+    <h2 class = "nn2">Kod Python</h2>
+    <code>if nterms &lt;= 0:<br/>
+        print(&quot;Please enter a positive integer&quot;)<br/>
+     elif nterms == 1:<br/>
+        print(&quot;Fibonacci sequence upto&quot;,nterms,&quot;:&quot;)<br/>
+        print(n1)<br/>
+     else:<br/>
+        print(&quot;Fibonacci sequence:&quot;)<br/>
+        while count &lt; nterms:<br/>
+            print(n1)<br/>
+            nth = n1 + n2<br/>
+            n1 = n2<br/>
+            n2 = nth<br/>
+            count += 1</code><br/>
+            <br/><br/><br/>
+<h2 class = "nn2">Kod JavaScript</h2>
+<code>function fib() {<br/>
+    let loop = [0, 1];<br/>
+    let number=document.getElementById(&apos;txtloop&apos;).value;<br/>
+    for (let i = 2; i &lt; number; i++)<br/>
+     loop[i] = loop[i-1]+ loop[i-2];<br/>
+      document.getElementById(&apos;output&apos;).innerHTML=loop[number-1];<br/>
+    }</code>
+<center>
+<h2 class = "nn2">Skrypt JS</h2>
+<p class = "topbar">Skrypt, który pokazuje dany waraz ciągu fibonacciego</p>
+<p class = "topbar">Podaj numer ciągu</p>  
+<input class = "nn2" type text="text" id="txtloop" />
+<button class = "nn3" onclick="fib()">Enter</button>
+<p class = "topbar" id="output"></p>
+<div id = "wynik"></div>
+</center>
+<br><br><br><br><br>
+
+</body>
+</html>
